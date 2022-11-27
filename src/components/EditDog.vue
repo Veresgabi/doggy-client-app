@@ -189,7 +189,7 @@ export default {
                         if (!this.isLoading && !this.isShowPopup) {
                             this.$emit('loading-spinner', true);
                             // const response = await httpResource.get(`http://localhost:8082/dog/get-dog?id=${this.dogId}`);
-                            const response = await httpResource.post(`https://doggy-spring-app.herokuapp.com/dog/get-dog?id=${this.dogId}`);
+                            const response = await httpResource.get(`https://doggy-spring-app.herokuapp.com/dog/get-dog?id=${this.dogId}`);
 
                             this.$emit('loading-spinner', false);
 
@@ -294,7 +294,7 @@ export default {
                             console.log(this.dog);
                             this.$emit('loading-spinner', true);
                             // const response = await httpResource.delete(`http://localhost:8082/dog/delete-dog?id=${this.dogId}`, this.dog.dogId);
-                            const response = await httpResource.post(`https://doggy-spring-app.herokuapp.com/dog/delete-dog?id=${this.dogId}`, this.dog.dogId);
+                            const response = await httpResource.delete(`https://doggy-spring-app.herokuapp.com/dog/delete-dog?id=${this.dogId}`, this.dog.dogId);
 
                             this.$emit('loading-spinner', false);
 
