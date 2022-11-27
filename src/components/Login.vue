@@ -56,7 +56,7 @@ export default {
         if (this.$cookies.get("userId") != "null") {
           try {
             this.$emit('loading-spinner', true);
-            const response = await httpResource.post(utility.getBaseUrl + "auth/refresh");
+            const response = await httpResource.post(utility.baseUrl + "auth/refresh");
 
             this.$emit('loading-spinner', false);
 
@@ -100,7 +100,7 @@ export default {
         };
         try {
           this.$emit('loading-spinner', true);
-          const response = await httpResource.post(utility.getBaseUrl + "auth/login", loginRequest);
+          const response = await httpResource.post(utility.baseUrl + "auth/login", loginRequest);
 
           this.$emit('loading-spinner', false);
 

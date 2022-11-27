@@ -153,7 +153,7 @@ export default {
                     try {
                         if (!this.isLoading && !this.isShowPopup) {
                             this.$emit('loading-spinner', true);
-                            const response = await httpResource.post(utility.getBaseUrl + "auth/refresh");
+                            const response = await httpResource.post(utility.baseUrl + "auth/refresh");
 
                             this.$emit('loading-spinner', false);
 
@@ -199,7 +199,7 @@ export default {
                             }
 
                             this.$emit('loading-spinner', true);
-                            const response = await httpResource.post(utility.getBaseUrl + "dog/save-dog", this.dog);
+                            const response = await httpResource.post(utility.baseUrl + "dog/save-dog", this.dog);
 
                             this.$emit('loading-spinner', false);
 

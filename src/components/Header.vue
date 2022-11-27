@@ -33,7 +33,7 @@ export default {
           try {
             if (!this.isLoading && !this.isShowPopup) {
               this.$emit('loading-spinner', true);
-              const response = await httpResource.post(utility.getBaseUrl + "auth/logout-user");
+              const response = await httpResource.post(utility.baseUrl + "auth/logout-user");
 
               this.$emit('loading-spinner', false);
 
