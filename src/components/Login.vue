@@ -56,7 +56,8 @@ export default {
         if (this.$cookies.get("userId") != "null") {
           try {
             this.$emit('loading-spinner', true);
-            const response = await httpResource.post("http://localhost:8082/auth/refresh");
+            // const response = await httpResource.post("http://localhost:8082/auth/refresh");
+            const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/auth/refresh");
 
             this.$emit('loading-spinner', false);
 
@@ -100,7 +101,8 @@ export default {
         };
         try {
           this.$emit('loading-spinner', true);
-          const response = await httpResource.post("http://localhost:8082/auth/login", loginRequest);
+          // const response = await httpResource.post("http://localhost:8082/auth/login", loginRequest);
+          const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/auth/login", loginRequest);
 
           this.$emit('loading-spinner', false);
 
