@@ -159,8 +159,7 @@ export default {
                     try {
                         if (!this.isLoading) {
                             this.$emit('loading-spinner', true);
-                            // const response = await httpResource.post("http://localhost:8082/auth/refresh");
-                            const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/auth/refresh");
+                            const response = await httpResource.post(utility.getBaseUrl + "auth/refresh");
 
                             this.$emit('loading-spinner', false);
 
@@ -201,8 +200,7 @@ export default {
                     try {
                         if (!this.isLoading) {
                             this.$emit('loading-spinner', true);
-                            // const response = await httpResource.get(`http://localhost:8082/dog/get-dog-page?page=${pageNumber}`);
-                            const response = await httpResource.get(`https://doggy-spring-app.herokuapp.com/dog/get-dog-page?page=${pageNumber}`);
+                            const response = await httpResource.get(utility.getBaseUrl + `dog/get-dog-page?page=${pageNumber}`);
 
                             this.$emit('loading-spinner', false);
 
@@ -311,8 +309,7 @@ export default {
                 try {
                     if (!this.isLoading && !this.isShowPopup) {
                         this.$emit('loading-spinner', true);
-                        // const response = await httpResource.post("http://localhost:8082/dog/filter", filterRequest);
-                        const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/dog/filter", filterRequest);
+                        const response = await httpResource.post(utility.getBaseUrl + "dog/filter", filterRequest);
 
                         this.$emit('loading-spinner', false);
 
@@ -363,8 +360,7 @@ export default {
                 try {
                     if (!this.isLoading) {
                         this.$emit('loading-spinner', true);
-                        // const response = await httpResource.get("http://localhost:8082/dog/sync-dogs");
-                        const response = await httpResource.get("https://doggy-spring-app.herokuapp.com/dog/sync-dogs");
+                        const response = await httpResource.get(utility.getBaseUrl + "dog/sync-dogs");
 
                         this.$emit('loading-spinner', false);
 

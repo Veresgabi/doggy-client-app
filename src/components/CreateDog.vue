@@ -153,8 +153,7 @@ export default {
                     try {
                         if (!this.isLoading && !this.isShowPopup) {
                             this.$emit('loading-spinner', true);
-                            // const response = await httpResource.post("http://localhost:8082/auth/refresh");
-                            const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/auth/refresh");
+                            const response = await httpResource.post(utility.getBaseUrl + "auth/refresh");
 
                             this.$emit('loading-spinner', false);
 
@@ -200,8 +199,7 @@ export default {
                             }
 
                             this.$emit('loading-spinner', true);
-                            // const response = await httpResource.post("http://localhost:8082/dog/save-dog", this.dog);
-                            const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/dog/save-dog", this.dog);
+                            const response = await httpResource.post(utility.getBaseUrl + "dog/save-dog", this.dog);
 
                             this.$emit('loading-spinner', false);
 

@@ -33,8 +33,7 @@ export default {
           try {
             if (!this.isLoading && !this.isShowPopup) {
               this.$emit('loading-spinner', true);
-              // const response = await httpResource.post("http://localhost:8082/auth/logout-user");
-              const response = await httpResource.post("https://doggy-spring-app.herokuapp.com/auth/logout-user");
+              const response = await httpResource.post(utility.getBaseUrl + "auth/logout-user");
 
               this.$emit('loading-spinner', false);
 
