@@ -1,0 +1,490 @@
+@font-face {
+   font-family: balsamiqSans;
+   src: url(BalsamiqSans-Bold.ttf);
+}
+
+#app {
+   color: dodgerblue;
+   align-content: center;
+   margin: 5%;
+   font-family: balsamiqSans;
+   font-size: 20px;
+}
+
+.card {
+   position: relative;
+   background-image: linear-gradient(rgb(30, 248, 255), dodgerblue);
+   color: white;
+   padding: 1rem;
+   border-radius: 10px;
+   box-shadow: 8px 8px rgb(199, 242, 255);
+   max-width: 450px;
+}
+
+.cards {
+   max-width: 1200px;
+   display: grid;
+   gap: 1rem;
+}
+
+@media (min-width: 600px) {
+   .cards { 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.header {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   min-width: 370px;
+   max-width: 1200px;
+   height: 90px;
+   border-radius: 4px;
+   background-color: dodgerblue;
+   color: white;
+   padding: 20px;
+}
+
+.simple-active-element {
+   cursor: pointer
+}
+
+.dog-image {
+   width: 100%;
+}
+
+.dog-details {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 5px;
+   margin-bottom: 40px;
+}
+
+.edit-field-text {
+   text-align: center;
+   padding: 20px 0;
+}
+
+.edit-dog-field {
+   display: grid;
+   grid-template-columns: 1fr 3fr 3fr 1fr;
+   row-gap: 10px;
+ }
+
+.editpage-image-root {
+   padding-top: 30px;
+   display: grid;
+   grid-template-columns: 1fr 6fr 1fr;
+}
+
+.editpage-dog-image {
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.dog-data-title {
+   color: yellow;
+}
+
+.pagination-root {
+   padding: 20px 0px 10px 0px;
+   text-align: center;
+   max-width: 1200px;
+}
+
+.pagination-element {
+   color: dodgerblue;
+   padding: 0px 5px;
+   border: 1px solid gainsboro;
+}
+
+.pagination-element:hover {
+   background-color: rgb(30, 248, 255);
+}
+
+.current-pagination-element {
+   background-color: dodgerblue;
+   color: white;
+   padding: 0px 5px;
+   border: 1px solid gainsboro;
+}
+
+.empty-pagination-element {
+   width: 25px;
+   display: inline-block
+}
+
+.pagination-arrow-element {
+   
+   margin: 10px 5px 0px;
+   border: 1px solid gainsboro;
+}
+
+.pagination-arrow-img {
+   height: 18px;
+   width: 25px;
+}
+
+.dog-img {
+   width: 60px;
+}
+
+.dog-paw-img {
+   width: 60px;
+}
+
+.dog-paw-icon-Parent {
+   margin-left: 15%;
+   position: absolute;
+}
+
+.activeElement {
+   cursor: pointer
+}
+
+.activeElement:hover {
+   background-color: rgb(30, 248, 255);
+}
+
+.activeImageElement {
+   cursor: pointer
+}
+
+.filter-bar {
+   max-width: 1200px;
+   display: grid;
+   gap: 1rem;
+   padding-bottom: 40px;
+   padding-top: 40px;
+   border-bottom: 1px solid gainsboro;
+}
+
+.filter-element {
+   margin-left: 5%;
+}
+
+@media (min-width: 600px) {
+   .filter-bar { 
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   }
+}
+
+.dropdown-check-list {
+   display: inline-block;
+   margin-top: 30px;
+   margin-left: 25%;
+ }
+ 
+.anchor {
+   position: relative;
+   cursor: pointer;
+   display: inline-block;
+   padding: 5px 50px 5px 10px;
+   border: 1px solid #ccc;
+}
+
+.dropdown-check-list-edit {
+   display: inline-block;
+ }
+
+.anchor-edit {
+   border-radius: 10px;
+   border: 1px solid gainsboro;
+   width: 250px;
+   position: relative;
+   cursor: pointer;
+   display: inline-block;
+   padding: 20px;
+}
+
+ .dropdown-check-list .anchor:active:after {
+   right: 8px;
+   top: 21%;
+ }
+
+ .dropdown-check-list-edit .anchor-edit:active:after {
+   right: 8px;
+   top: 21%;
+ }
+ 
+.checkboxes {
+   z-index: 3;
+   display: block;
+   position: absolute;
+   border-radius: 7px;
+   background-color: rgb(199, 242, 255);
+   padding: 2px;
+   margin: 0;
+   border: 1px solid #ccc;
+}
+
+.checkbox-text {
+   margin-right: 15px;
+}
+
+.icon-container {
+   position: absolute; 
+   bottom: 0;
+   padding-bottom: 10px;
+   margin: 0 40% 0;
+}
+
+.icon {
+   width: 30px;
+}
+
+.loader {
+   z-index: 6;
+   position: fixed;
+   left: 45%;
+   top: 40%;
+   border: 16px solid #a2b8c7;
+   border-radius: 50%;
+   border-top: 16px solid #3498db;
+   width: 90px;
+   height: 90px;
+   -webkit-animation: spin 2s linear infinite;
+   animation: spin 2s linear infinite;
+}
+ 
+@-webkit-keyframes spin {
+   0% { -webkit-transform: rotate(0deg); }
+   100% { -webkit-transform: rotate(360deg); }
+ }
+ 
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
+
+.popup {
+   color: rgb(17, 113, 209);
+   overflow: hidden;
+   font-size: 16px;
+   z-index: 2;
+   box-shadow: 4px 4px rgb(199, 242, 255);
+   background-color: rgb(12, 234, 241);
+   position: fixed;
+   border-radius: 20px;
+   left: 30%;
+   right: 30%;
+   top: 40%;
+   border-style: ridge;
+   border: 2px solid gray;
+   text-align: center;
+   width: auto;
+   height: auto;
+ }
+
+.popup-button {
+   color: rgb(17, 113, 209);
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   border-style: ridge;
+   border: 1px solid gray;
+   text-align: center;
+   padding: 5px;
+   max-width: 40%;
+   max-height: 30px;
+   background-color: white;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+.popup-button:hover {
+   color: white;
+   background-color: dodgerblue;
+   cursor: pointer;
+   padding-left: 3px;
+}
+
+.popup-button-inactive {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   border-style: ridge;
+   border: 1px solid gainsboro;
+   text-align: center;
+   padding: 5px;
+   max-width: 40%;
+   max-height: 30px;
+   background-color: rgba(160, 160, 160, 0.089);
+   color:rgba(128, 128, 128, 0.692)
+}
+
+.popup-button-parent {
+   position: relative;
+   margin-left: 35%;
+}
+
+.popup-buttons-parent {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-left: 20%;
+}
+
+.imageModal {
+   color: rgb(17, 113, 209);
+   overflow: hidden;
+   font-size: 16px;
+   z-index: 2;
+   box-shadow: 4px 4px rgb(199, 242, 255);
+   background-color: rgb(12, 234, 241);
+   position: fixed;
+   border-radius: 20px;
+   left: 10%;
+   right: 10%;
+   top: 10%;
+   border-style: ridge;
+   border: 2px solid gray;
+   text-align: center;
+   width: auto;
+   height: auto;
+ }
+
+.login-content-root {
+   border-bottom: 1px solid gainsboro;
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+   row-gap: 10px;
+   column-gap: 20px;
+   padding-bottom: 40px;
+   padding-top: 40px;
+}
+
+input {
+   padding: 20px;
+   width: 300px;
+   border-radius: 10px;
+   border: 1px solid gainsboro;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+input[type=text] {
+   color: dodgerblue !important;
+   background-color: rgb(199, 242, 255);
+}
+
+input[type=password] {
+   color: dodgerblue;
+   background-color: rgb(199, 242, 255);
+}
+
+input[type=checkbox] {
+   color: dodgerblue;
+   width: 100px;
+}
+
+input[type=text]:hover {
+   background-color: white;
+}
+
+input[type=password]:hover {
+   background-color: white;
+}
+
+.inputText {
+   text-align: right;
+   padding: 20px 0;
+}
+
+.inputField {
+   font-size: 20px;
+   font-family: balsamiqSans;
+   background-color: rgb(234 252 255);
+}
+
+.button {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   row-gap: 10px;
+   column-gap: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.action-element {
+   color: rgb(17, 105, 193);
+   border-radius: 25px;
+   border-style: ridge;
+   border: 1px solid gray;
+   text-align: center;
+   padding: 20px;
+   width: auto;
+   height: auto;
+   background-color: rgb(30, 248, 255);
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+.action-element-inactive {
+   border-radius: 25px;
+   border-style: ridge;
+   border: 1px solid gainsboro;
+   text-align: center;
+   padding: 20px;
+   width: auto;
+   height: auto;
+   background-color: rgba(160, 160, 160, 0.089);
+   color:rgba(128, 128, 128, 0.692)
+}
+
+.action-element:hover {
+   color: white;
+   background-color: dodgerblue;
+   cursor: pointer;
+   padding-left: 25px;
+}
+
+.small-buttons {
+   padding-top: 40px;
+   max-width: 1200px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 3fr;
+}
+
+.small-action-element {
+   color: rgb(17, 105, 193);
+   border-radius: 18px;
+   border-style: ridge;
+   border: 1px solid gray;
+   text-align: center;
+   padding: 10px;
+   width: 125px;
+   height: 25px;
+   background-color: rgb(30, 248, 255);
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   display: block;
+}
+
+.small-button {
+   margin-right: 18px;
+}
+
+.small-action-element-inactive {
+   border-radius: 18px;
+   border-style: ridge;
+   border: 1px solid gainsboro;
+   text-align: center;
+   padding: 10px;
+   width: 125px;
+   height: 25px;
+   background-color: rgba(160, 160, 160, 0.089);
+   color:rgba(128, 128, 128, 0.692);
+   display: block
+}
+
+.small-action-element:hover {
+   color: white;
+   background-color: dodgerblue;
+   cursor: pointer;
+   padding-left: 10px;
+}
+
+   
