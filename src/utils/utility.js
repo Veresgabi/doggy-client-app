@@ -18,8 +18,8 @@ function getErrorMessage(error) {
 
 let breedGroups = ["Herding", "Hound", "Mixed", "Non-Sporting", "Sporting", "Terrier", "Toy", "Working"];
 
-// let baseUrl = "http://localhost:8082/";
-let baseUrl = "https://doggy-spring-app.herokuapp.com/";
+let baseUrl = "http://localhost:8082/";
+// let baseUrl = "https://doggy-spring-app.herokuapp.com/";
 
 function getBreedGroups() {
   return breedGroups;
